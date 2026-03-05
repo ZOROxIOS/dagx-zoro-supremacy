@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body style="background:red;">
-<h1>Hello Arjun</h1>
+<head>
+<style>
+body { background:black; }
+h1 { color: red; font-size: 50px; }
+</style>
+</head>
+<body>
+<h1>ZOROxIOS PANEL</h1>
 </body>
 </html>
