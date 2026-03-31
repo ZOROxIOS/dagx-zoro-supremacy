@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<pre>
+{
+  "aimAssist": true,
+  "aimStrength": 18.85,
+  "headLock": true,
+  "smoothness": 16.6,
+  "fov": 10,
+
+  "EnableMagicBullet": true,
+  "headaimstrength": 9.98,
+  "BaseAimStrength": 10.98,
+  "MaxAimStrength": 10.99,
+  "PredictionLeadTime": 0.2,
+  "HeadTargetingMultiplier": 10.0,
+  "RecoilCompensation": 3.0,
+  "ContinuousFireAssist": 6,
+
+  "CombatAimCore": {
+    "LockTargetBone": "Head",
+    "LockEnemyPriority": 99999,
+    "BaseAimAssistIntensity": 999999.0,
+    "LockRadius": 999999.0,
+    "LockAngleRange": 36000.0,
+    "MaxLockableEnemies": 999
+  },
+
+  "WeaponCombatSystem": {
+    "RecoilVerticalReduction": 9999.0,
+    "RecoilHorizontalDampening": 9999.0,
+    "GyroFusionMultiplier": 9999.0,
+    "BloomRecoveryRate": 9999.0
+  },
+
+  "PhysicsCombatSettings": {
+    "HitboxExpansion": 9999.0,
+    "VelocityPredictiveScale": 9999.0,
+    "CollisionPredictionBuffer": 9999.0,
+    "PenetrationAllowance": 9999.0
+  },
+
+  "TargetZoneSettings": {
+    "Head": {
+      "Priority": 999999.0,
+      "Expansion": 999999.0
+    },
+    "Neck": {
+      "Priority": 999999.0,
+      "Expansion": 9999.0
+    },
+    "Chest": {
+      "Priority": 100000.0,
+      "Expansion": 50000.0
+    },
+    "Body": {
+      "Priority": 50.0,
+      "Expansion": 300.0
+    }
+  },
+
+  "AimSensitivityControl": {
+    "Sensitivity": 9999.0,
+    "SpeedMultiplier": 9999.0,
+    "Tracking": 9999.0,
+    "HeadBias": 9999.0
+  },
+
+  "ForceAimSystem": {
+    "Enabled": true,
+    "HeadOnly": true,
+    "TrackSpeed": 9999.0,
+    "Prediction": 9999.0
+  },
+
+  "HitboxSystem": {
+    "HeadMultiplier": 9999.0,
+    "NeckMultiplier": 9999.0,
+    "ChestMultiplier": 100.0,
+    "BodyMultiplier": 50.0,
+    "DynamicScaling": true
+  },
+
+  "BrutalHeadshotSystem": {
+    "Enabled": true,
+    "HeadPriority": 9999.0,
+    "LockStrength": 9999.0,
+    "TrackingSpeed": 9999.0,
+    "ReactionTime": 0.0001
+  },
+
+  "AimAssistSystem": {
+    "AimStrength": 12.99,
+    "MinStrength": 10.95,
+    "MaxStrength": 12.99,
+    "Tracking": 12.99,
+    "LockAngle": 180.0
+  },
+
+  "HitHeadshotSystem": {
+    "AimStrength": 1992.99,
+    "MinStrength": 122.95,
+    "MaxStrength": 1992.99,
+    "Tracking": 1992.99,
+    "LockAngle": 360.0
+  },
+
+  "MagicBulletSystem": {
+    "Enabled": true,
+    "AimStrength": 10.98,
+    "MaxAimStrength": 10.99,
+    "HeadAimStrength": 9.98,
+    "PredictionLeadTime": 0.2
+  },
+
+  "HipFireOnlyHeadSystem": {
+    "Strength": 199992.99,
+    "MinStrength": 1292.95,
+    "Tracking": 199992.99,
+    "LockAngle": 360.0
+  },
+
+  "RecoilControlSystem": {
+    "Vertical": 9999.0,
+    "Horizontal": 9999.0,
+    "Recovery": 9999.0
+  },
+
+  "BulletPhysicsSystem": {
+    "Speed": 9999.0,
+    "Gravity": 0.0,
+    "DropCompensation": 9999.0
+  },
+
+  "TargetTrackingSystem": {
+    "MaxTargets": 999,
+    "Priority": "Head"
+  },
+
+  "SpreadControlSystem": {
+    "Reduction": 9999.0,
+    "Recovery": 9999.0
+  },
+
+  "ForceAimOverride": {
+    "Enabled": true,
+    "Strength": 9999.0,
+    "LockAngle": 360.0
+  },
+
+  "SpeedAimSystem": {
+    "Speed": 9999.0,
+    "Reaction": 9999.0
+  },
+
+  "DistanceSystem": {
+    "AimStrength": 9999.99,
+    "Close": 9999.0,
+    "Mid": 9999.0,
+    "Long": 9999.0
+  },
+
+  "BulletAimConnectivity": {
+    "Close": 9999.0,
+    "Mid": 9999.0,
+    "Long": 9999.0,
+    "Prediction": 999.0
+  }
+}
+</pre>
+<meta charset="UTF-8">
+<title>ZOROxIOSxVIPpanel</title>
+
+<!-- PWA SUPPORT -->
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<style>
+body{
+background:#000;
+color:#fff;
+font-family:Arial;
+text-align:center;
+}
+
+.panel{
+width:340px;
+margin:auto;
+margin-top:60px;
+border:2px solid red;
+border-radius:12px;
+padding:20px;
+background:#000;
+box-shadow:0 0 90px red;
+}
+
+h2{
+letter-spacing:3px;
+text-shadow:0 0 45px red;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:16px 0;
+font-weight:bold;
+}
+
+.switch{
+position:relative;
+display:inline-block;
+width:46px;
+height:24px;
+}
+
+.switch input{display:none;}
+
+.slider{
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+background:#111;
+border-radius:30px;
+}
+
+.slider:before{
+content:"";
+position:absolute;
+height:18px;
+width:18px;
+left:3px;
+bottom:3px;
+background:white;
+border-radius:50%;
+transition:0.3s;
+}
+
+input:checked + .slider{
+background:red;
+box-shadow:0 0 40px red;
+}
+
+input:checked + .slider:before{
+transform:translateX(22px);
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:red;
+border:none;
+color:white;
+font-weight:bold;
+box-shadow:0 0 40px red;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:80%;
+background:#111;
+border:1px solid red;
+color:white;
+}
+
+.log{
+margin-top:10px;
+height:100px;
+overflow:auto;
+border:1px solid red;
+font-size:12px;
+text-align:left;
+padding:5px;
+color:#ff0000;
+}
+
+.hidden{display:none;}
+</style>
+</head>
+
+<body>
+
+<div id="login" class="panel">
+<h2>ZOROxIOSxVIPpanel</h2>
+<input id="pass" placeholder="Enter Key">
+<button id="loginBtn" type="button">ENTER PANEL</button>
+</div>
+
+<div id="panel" class="panel hidden">
+
+<h2>ZOROxIOSxVIPpanel</h2>
+
+<div class="row"><span>HEADSHOT MODE</span><label class="switch"><input type="checkbox" id="headshot"><span class="slider"></span></label></div>
+<div class="row"><span>BULLET TRACKING</span><label class="switch"><input type="checkbox" id="bullet"><span class="slider"></span></label></div>
+<div class="row"><span>220 FPS MODE</span><label class="switch"><input type="checkbox" id="fps"><span class="slider"></span></label></div>
+<div class="row"><span>NETWORK BOOST</span><label class="switch"><input type="checkbox" id="network"><span class="slider"></span></label></div>
+
+<div class="row"><span>ULTRA AIM CORE</span><label class="switch"><input type="checkbox" id="ultra"><span class="slider"></span></label></div>
+<div class="row"><span>REFLEX OVERDRIVE</span><label class="switch"><input type="checkbox" id="reflex"><span class="slider"></span></label></div>
+<div class="row"><span>TARGET ANNIHILATOR</span><label class="switch"><input type="checkbox" id="annihilator"><span class="slider"></span></label></div>
+<div class="row"><span>PREDATOR LOCK</span><label class="switch"><input type="checkbox" id="predator"><span class="slider"></span></label></div>
+<div class="row"><span>ZERO DELAY CORE</span><label class="switch"><input type="checkbox" id="delay"><span class="slider"></span></label></div>
+<div class="row"><span>DAMAGE BOOSTER</span><label class="switch"><input type="checkbox" id="damage"><span class="slider"></span></label></div>
+
+<input type="file" id="file">
+<button id="applyBtn" type="button">APPLY FILE</button>
+
+<p id="fileStatus"></p>
+
+<div class="log" id="log"></div>
+
+<button id="playBtn" type="button">Play BGMI</button>
+
+</div>
+
+<script>
+
+const KEY = "Zoro";
+const modes = ["headshot","bullet","fps","network","ultra","reflex","annihilator","predator","delay","damage"];
+
+// LOAD STATE
+function loadState(){
+modes.forEach(id=>{
+const saved = localStorage.getItem(id);
+if(saved === "true"){
+document.getElementById(id).checked = true;
+}
+});
+}
+
+// SAVE STATE
+function saveState(id, value){
+localStorage.setItem(id, value);
+}
+
+// INIT
+window.onload = function(){
+
+if(localStorage.getItem("logged") === "true"){
+document.getElementById("login").style.display = "none";
+document.getElementById("panel").classList.remove("hidden");
+showLog("SYSTEM RESTORED :: BRUTAL DESTROYER MAXED 999999");
+loadState();
+}
+
+document.getElementById("loginBtn").onclick = function(){
+const input = document.getElementById("pass").value;
+
+if(input !== KEY){
+showLog("ACCESS DENIED :: INVALID KEY");
+return;
+}
+
+localStorage.setItem("logged","true");
+
+document.getElementById("login").style.display = "none";
+document.getElementById("panel").classList.remove("hidden");
+
+showLog("ZORO VIP SYSTEM UNLOCKED :: BRUTAL DESTROYER MAXED 999999");
+};
+
+// MODES
+modes.forEach(id=>{
+document.getElementById(id).onchange = function(){
+saveState(id, this.checked);
+
+showLog(id.toUpperCase() + (this.checked 
+? " ACTIVATED :: BRUTAL DESTROYER MAXED 999999 :: NO DROP EVER" 
+: " DEACTIVATED"));
+};
+});
+
+// FILE
+document.getElementById("applyBtn").onclick = function(){
+const f = document.getElementById("file").files[0];
+
+if(!f){
+document.getElementById("fileStatus").innerHTML = "No file selected";
+return;
+}
+
+document.getElementById("fileStatus").innerHTML = "Applied: " + f.name + " :: BRUTALLY DESTROYED";
+showLog("FILE INJECTED :: " + f.name + " :: BRUTALLY DESTROYED :: MAX POWER LOADED");
+};
+
+// PLAY
+document.getElementById("playBtn").onclick = function(){
+showLog("EXECUTION :: FINAL STATE :: BRUTAL DESTROYER MAXED 999999");
+window.location.href = "shortcuts://run-shortcut?name=ZORO_GAME_LAUNCH_BGMI";
+};
+
+// RESUME
+document.addEventListener("visibilitychange", function(){
+if(!document.hidden){
+showLog("SYSTEM RESUMED :: BRUTAL DESTROYER MAXED 999999 :: NO DROP EVER");
+}
+});
+
+};
+
+function showLog(text){
+const logBox = document.getElementById("log");
+logBox.innerHTML += "> " + text + "<br>";
+logBox.scrollTop = logBox.scrollHeight;
+}
+
+</script>
+<pre>
+{
+  "aimAssist": true,
+  "aimStrength": 18.85,
+  "headLock": true,
+  "smoothness": 16.6,
+  "fov": 10,
+
+  "EnableMagicBullet": true,
+  "headaimstrength": 9.98,
+  "BaseAimStrength": 10.98,
+  "MaxAimStrength": 10.99,
+  "PredictionLeadTime": 0.2,
+  "HeadTargetingMultiplier": 10.0,
+  "RecoilCompensation": 3.0,
+  "ContinuousFireAssist": 6,
+
+  "CombatAimCore": {
+    "LockTargetBone": "Head",
+    "LockEnemyPriority": 99999,
+    "BaseAimAssistIntensity": 999999.0,
+    "LockRadius": 999999.0,
+    "LockAngleRange": 36000.0,
+    "MaxLockableEnemies": 999
+  },
+
+  "WeaponCombatSystem": {
+    "RecoilVerticalReduction": 9999.0,
+    "RecoilHorizontalDampening": 9999.0,
+    "GyroFusionMultiplier": 9999.0,
+    "BloomRecoveryRate": 9999.0
+  },
+
+  "PhysicsCombatSettings": {
+    "HitboxExpansion": 9999.0,
+    "VelocityPredictiveScale": 9999.0,
+    "CollisionPredictionBuffer": 9999.0,
+    "PenetrationAllowance": 9999.0
+  },
+
+  "TargetZoneSettings": {
+    "Head": {
+      "Priority": 999999.0,
+      "Expansion": 999999.0
+    },
+    "Neck": {
+      "Priority": 999999.0,
+      "Expansion": 9999.0
+    },
+    "Chest": {
+      "Priority": 100000.0,
+      "Expansion": 50000.0
+    },
+    "Body": {
+      "Priority": 50.0,
+      "Expansion": 300.0
+    }
+  },
+
+  "AimSensitivityControl": {
+    "Sensitivity": 9999.0,
+    "SpeedMultiplier": 9999.0,
+    "Tracking": 9999.0,
+    "HeadBias": 9999.0
+  },
+
+  "ForceAimSystem": {
+    "Enabled": true,
+    "HeadOnly": true,
+    "TrackSpeed": 9999.0,
+    "Prediction": 9999.0
+  },
+
+  "HitboxSystem": {
+    "HeadMultiplier": 9999.0,
+    "NeckMultiplier": 9999.0,
+    "ChestMultiplier": 100.0,
+    "BodyMultiplier": 50.0,
+    "DynamicScaling": true
+  },
+
+  "BrutalHeadshotSystem": {
+    "Enabled": true,
+    "HeadPriority": 9999.0,
+    "LockStrength": 9999.0,
+    "TrackingSpeed": 9999.0,
+    "ReactionTime": 0.0001
+  },
+
+  "AimAssistSystem": {
+    "AimStrength": 12.99,
+    "MinStrength": 10.95,
+    "MaxStrength": 12.99,
+    "Tracking": 12.99,
+    "LockAngle": 180.0
+  },
+
+  "HitHeadshotSystem": {
+    "AimStrength": 1992.99,
+    "MinStrength": 122.95,
+    "MaxStrength": 1992.99,
+    "Tracking": 1992.99,
+    "LockAngle": 360.0
+  },
+
+  "MagicBulletSystem": {
+    "Enabled": true,
+    "AimStrength": 10.98,
+    "MaxAimStrength": 10.99,
+    "HeadAimStrength": 9.98,
+    "PredictionLeadTime": 0.2
+  },
+
+  "HipFireOnlyHeadSystem": {
+    "Strength": 199992.99,
+    "MinStrength": 1292.95,
+    "Tracking": 199992.99,
+    "LockAngle": 360.0
+  },
+
+  "RecoilControlSystem": {
+    "Vertical": 9999.0,
+    "Horizontal": 9999.0,
+    "Recovery": 9999.0
+  },
+
+  "BulletPhysicsSystem": {
+    "Speed": 9999.0,
+    "Gravity": 0.0,
+    "DropCompensation": 9999.0
+  },
+
+  "TargetTrackingSystem": {
+    "MaxTargets": 999,
+    "Priority": "Head"
+  },
+
+  "SpreadControlSystem": {
+    "Reduction": 9999.0,
+    "Recovery": 9999.0
+  },
+
+  "ForceAimOverride": {
+    "Enabled": true,
+    "Strength": 9999.0,
+    "LockAngle": 360.0
+  },
+
+  "SpeedAimSystem": {
+    "Speed": 9999.0,
+    "Reaction": 9999.0
+  },
+
+  "DistanceSystem": {
+    "AimStrength": 9999.99,
+    "Close": 9999.0,
+    "Mid": 9999.0,
+    "Long": 9999.0
+  },
+
+  "BulletAimConnectivity": {
+    "Close": 9999.0,
+    "Mid": 9999.0,
+    "Long": 9999.0,
+    "Prediction": 999.0
+  }
+}
+</pre>
+</body>
+</html>
